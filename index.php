@@ -1,6 +1,9 @@
 <?php 
+    // numero dato dall'utente
     $numero = isset($_GET["numero"]) ? $_GET["numero"] : null;
-   echo "il numero è ".$numero
+
+//    tutti i caratteri
+   $caratteri = array_merge(range('a', 'z'), range('A', 'Z'), range(0, 9), array('@', '#', '$', '%', '&', '*'));
 
 
 ?>
