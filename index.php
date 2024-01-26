@@ -1,6 +1,8 @@
 <?php 
-   $numero=$_GET["numero"];
+    $numero = isset($_GET["numero"]) ? $_GET["numero"] : null;
    echo "il numero è ".$numero
+
+
 ?>
 
 <!DOCTYPE html>
