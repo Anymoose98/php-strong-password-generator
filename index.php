@@ -1,3 +1,7 @@
+<?php 
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +12,26 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1 class="text-center">Prova</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-3">
+                <h1>Password Generator</h1>
+            </div>
+            <div class="col-6">
+                    <form action="" method="get">
+                        <div class="col-12">
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="col-12 text-center my-2">
+                            <button type="button" class="btn btn-success">Genera password</button>
+                        </div>
+                    </form>
+
+            </div>
+            <div class="col-6">
+                <h5>Inserisci la grandezza della password</h5>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
