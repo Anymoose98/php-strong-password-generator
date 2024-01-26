@@ -1,5 +1,6 @@
 <?php 
-    
+   $numero=$_GET["numero"];
+   echo "il numero è ".$numero
 ?>
 
 <!DOCTYPE html>
@@ -18,12 +19,12 @@
                 <h1>Password Generator</h1>
             </div>
             <div class="col-6">
-                    <form action="" method="get">
+                    <form action="./index.php" method="GET">
                         <div class="col-12">
-                            <input type="number" class="form-control">
+                            <input type="number" name="numero" id="numero" class="form-control" placeholder="Inserisci quanto deve essere lunga la password">
                         </div>
                         <div class="col-12 text-center my-2">
-                            <button type="button" class="btn btn-success">Genera password</button>
+                            <button type="submit" class="btn btn-success">Genera password</button>
                         </div>
                     </form>
 
