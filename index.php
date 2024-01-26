@@ -10,9 +10,13 @@
     // Mescola l'array in modo casuale
     $caratteri_mischiati = str_shuffle(implode('', $caratteri));
     
-    // Controllo se funziona
-    foreach (str_split($caratteri_mischiati) as $carattere_mischiato) {
-        echo $carattere_mischiato;
+
+    // Creo un if e controllo se funziona
+    if(isset($_GET["numero"]) ? $_GET["numero"] : null){
+        echo "Trovato";
+    }
+    else{
+        echo "non esiste ancora";
     }
 ?>
 
