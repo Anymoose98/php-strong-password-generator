@@ -14,16 +14,17 @@
     
     
     // Creo un if e controllo se funziona
-    if(isset($_GET["numero"]) ? $_GET["numero"] : null){
+    if((isset($numero) && $numero < 3)){
+        $password_generata="Numero inserito non valido, inserisci un numero maggiore o uguale a 3";
+    }
+    else if(isset($_GET["numero"]) ? $_GET["numero"] : null){
         $password_generata = substr("$caratteri_mischiati", 0, $numero);
     }
     else{
         $password_generata = "Crea la tua password";
     }
 
-    if((isset($numero) && $numero < 3)){
-        $password_generata="Numero inserito non valido, inserisci un numero maggiore o uguale a 3";
-    }
+    
 ?>
 
 <!DOCTYPE html>
