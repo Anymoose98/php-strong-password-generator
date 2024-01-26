@@ -1,5 +1,5 @@
 <?php 
-    $password_generata="";
+    include __DIR__.'/partials/functions.php';
 
     // Numero dato dall'utente
     $numero = isset($_GET["numero"]) ? $_GET["numero"] : null;
@@ -7,23 +7,8 @@
     // Tutti i caratteri
     $caratteri = array_merge(range('a', 'z'), range('A', 'Z'), range(0, 9), array('@', '#', '$', '%', '&', '*'));
     
-    
-    
     // Mescola l'array in modo casuale
     $caratteri_mischiati = str_shuffle(implode('', $caratteri));
-    
-    
-    // Creo un if e controllo se funziona
-    if((isset($numero) && $numero < 3)){
-        $password_generata="Numero inserito non valido, inserisci un numero maggiore o uguale a 3";
-    }
-    else if(isset($_GET["numero"]) ? $_GET["numero"] : null){
-        $password_generata = substr("$caratteri_mischiati", 0, $numero);
-    }
-    else{
-        $password_generata = "Crea la tua password";
-    }
-
     
 ?>
 
@@ -59,7 +44,7 @@
 
                 <!-- Password -->
                 <div class="col-12 text-center">
-                    <h2><?php echo $password_generata ?></h2>
+                    <h2><?php echo generaPassword($numero, $caratteri_mischiati) ?></h2>
                 </div>
             </div>
         </div>
