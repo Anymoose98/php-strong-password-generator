@@ -22,7 +22,7 @@ function generaPassword($numero, $caratteri_mischiati){
     <title>Document</title>
 </head>
 <body>
-    
+pROVA
 </body>
 </html>
 
